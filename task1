@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class CircleCheck {
+    
+    //Проверка, точки внутри круга 
+    public static boolean isPointInsideCircle(double centerX, double centerY, double radius, double pointX, double pointY) {
+        //квадрат расстояния от центра до точки
+        double distanceSquared = (pointX - centerX) * (pointX - centerX) + (pointY - centerY) * (pointY - centerY);
+        
+        return distanceSquared <= radius * radius;
+    }
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("=== ПРОВЕРКА ТОЧКИ В КРУГЕ ===");
+        
+        System.out.print("Введите координату X центра круга: ");
+        double centerX = scanner.nextDouble();
+        
+        System.out.print("Введите координату Y центра круга: ");
+        double centerY = scanner.nextDouble();
+        
+        System.out.print("Введите радиус круга: ");
+        double radius = scanner.nextDouble();
+        
+        System.out.print("Введите координату X точки: ");
+        double pointX = scanner.nextDouble();
+        
+        System.out.print("Введите координату Y точки: ");
+        double pointY = scanner.nextDouble();
+        
+        boolean result = isPointInsideCircle(centerX, centerY, radius, pointX, pointY);
+        
+        System.out.println("\nРЕЗУЛЬТАТ:");
+        if (result) {
+            System.out.println(" Точка находится внутри круга!");
+        } else {
+            System.out.println(" Точка находится снаружи круга!");
+        }
+        
+        scanner.close();
+    }
+}
