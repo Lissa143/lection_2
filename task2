@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class task2 {
+    
+    public static void printDigits(int n) {
+        if (n < 10) {
+            System.out.print(n);
+        } else {
+            printDigits(n / 10);
+            System.out.print(" " + (n % 10));
+        }
+    }
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println(" ПРИМЕР ");
+        int example1 = 12345;
+        System.out.print("Число " + example + " -> цифры: ");
+        printDigits(example);
+        
+        System.out.println("\n\n ВВЕДИТЕ СВОЁ ЧИСЛО ");
+        System.out.print("Введите натуральное число: ");
+        int N = scanner.nextInt();
+        
+        System.out.print("Цифры числа " + N + ": ");
+        printDigits(N);
+        
+        scanner.close();
+    }
+}
