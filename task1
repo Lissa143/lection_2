@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class CircleCheck {
+public class task1 {
     
     //Проверка, точки внутри круга 
     public static boolean isPointInsideCircle(double centerX, double centerY, double radius, double pointX, double pointY) {
