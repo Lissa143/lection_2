@@ -13,7 +13,7 @@ public class CircleCheck {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-        System.out.println("=== ПРОВЕРКА ТОЧКИ В КРУГЕ ===");
+        System.out.println(" ПРОВЕРКА ТОЧКИ В КРУГЕ: ");
         
         System.out.print("Введите координату X центра круга: ");
         double centerX = scanner.nextDouble();
